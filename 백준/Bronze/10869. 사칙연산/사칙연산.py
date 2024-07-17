@@ -1,0 +1,6 @@
+int1, int2 = map(int, input().split())
+print(int1 + int2)
+print(int1 - int2)
+print(int1 * int2)
+print("%d" % (int1 / int2))
+print(int1 % int2)
