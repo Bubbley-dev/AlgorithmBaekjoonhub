@@ -7,7 +7,7 @@ int main()
     
     int n, t, a;
     cin >> n >> t;
-    vector<vector<int>> v(n+1, vector<int>(4));
+    vector<vector<int>> v(n, vector<int>(4));
     
     for (int i=0; i<n; i++)
     {
@@ -22,6 +22,10 @@ int main()
         {
             if (a[2] == b[2])
             {
+                if (a[3] == b[3])
+                {
+                    return a[0] < b[0];
+                }
                 return a[3] > b[3];
             }
             return a[2] > b[2];
@@ -33,7 +37,7 @@ int main()
     {
         if (v[i][0] == t)
         {
-            cout << i;
+            cout << i+1;
             return 0;
         }
     }
