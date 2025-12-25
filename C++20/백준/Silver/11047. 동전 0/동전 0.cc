@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
+	int n, k, ans=0;
+	cin >> n >> k;
+	vector<int> v(n);
+	while (n--)
+	{
+	    cin >> v[n];
+	}
+	
+	for (int m : v)
+	{
+	    ans += (k / m);
+	    k %= m;
+	}
+	
+	cout<<ans;
+	
+	return 0;
+}
